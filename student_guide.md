@@ -89,13 +89,113 @@ course.
 
 ## Getting Setup
 
+You should only need to complete the steps in this section once for the lab
+computers and once for your personal computer. They are instructions
+specifically for Mac OSX, so if you're running any other operating system,
+please contact us, and we will gladly help you get setup.
+
+***Please read all the instructions in any given section below BEFORE clicking
+the links in them!***
+
 ### Signing Up for GitHub
 
-### Installing Eclipse with EGit
+> **NOTE:** If you already have a GitHub account, do **NOT** sign up for a new
+> account.
 
-### Configuring the `OBJECTDRAW` Library
+1. Go to [GitHub's Signup page](https://github.com/join).
+2. Fill in the information on the first step using your Claremont issued email
+   address. (*You can always add a personal email address later if you would
+   like.*) Click next once you have completed the step.
+3. On Step 2, select the **$0** plan and continue to the final step.
+4. Once you have complete the GitHub registration, tell us about your account
+   username so we can add you to your own private repository.
 
-### Configuring Git and Cloning the Starter Code Repository
+### Installing Eclipse with EGit and `OBJECTDRAW`
+
+> This guide assumes you already have the Java JDK (1.8.x) installed.
+
+1. Go to the this page: [Eclipse IDE for Java EE Developers][eclipse].
+   
+   > **WARNING:** Do not click the large orange download link at the top of
+   > the page--it will make these instructions useless!
+
+2. On the right side of the page under **Download Links** select the
+   appropriate operating system. (If you're on the lab computers, select Mac
+   OS X.)
+3. On the next page, click the orange download button that is on the **left 
+   side** of the page. **(Do not use the button that is in the upper right
+   corner!)**
+4. Once the file downloads, open Finder in Mac and navigate to the Downloads
+   directory.
+5. Double click the `.tar` file that downloaded to install Eclipse.
+6. Move the application to your Applications folder by dragging the
+   application that installed after Step 5 in your Downloads folder.
+7. Launch Eclipse by double clicking the icon.
+8. In the dialog box that appears, leave the default value and check the box
+   in the lower left corner to suppress the dialog box each time you launch
+   Eclipse. Then click OK.
+9. In the upper right corner of the new Eclipse window, click ***Workbench***.
+10. On the toolbar go to ***Window > Perspective > Open Perspective > Java***.
+11. Add the Terminal to the view by clicking !["terminal"]({{ site.baseurl }}/images/terminal.png)
+    in the toolbar. Then click OK in the dialog box that appears.
+
+    > The terminal that appears will appear in the same tab as the java
+    > debugger that you will rely on throughout the semester, so be sure to
+    > close the terminal when you are not using it or switch tabs!
+
+12. Now, add the EGit plug-in to the workbench by clicking ***Window > Show
+    View > Other... > Git > Git Repositories***.
+13. Download the `OBJECTDRAW` [library][objectdraw] and move the file into
+    a permanent place.
+14.	In the toolbar, click ***Eclipse > Preferences > Build Path > Classpath
+    Variables***
+15. Click ***New...*** on the right side.
+16. In *Name*, type the following (including the capitilization): `OBJECTDRAW`
+17. In *Path*, browse to the file you downloaded and moved in Step 13.
+18. Then click OK twice to finish!
+
+At this point, Eclipse should look like [this]({{ site.baseurl }}/images/env_preview.png).
+
+### Configuring Git and Cloning the Starter Code Repository into Eclipse
+
+1. Clone the repository.
+   1. Click on **File** *>* **Import** *>* **Git** *>* **Projects from Git**
+   2. Click on **Clone URI** and **Next >**.
+   3. In the **Source Git Repository** dialog box that appears, copy and paste
+      the following into the *URI* box: 
+      `https://github.com/PomonaCS051/fa2015.git`
+   4. Type in your GitHub username where it says "User" and your GitHub
+      password where it says "Password". Check the box next to "Store in Secure
+      Store" and click **Next >**. 
+   5. Ensure the `master` branch is selected. Then click **Next >**.
+2. Copy the text in the *Directory* box. Paste it somewhere safe.
+   Click **Next>**
+3. Ensure the box next to Lab00 is checked. Then click **Finish**
+   
+    > If Lab00 does not automatically appear in the package explorer,
+    > expand the working directory in the Git Repositories pane 
+    > and right-click to select *Import...*. Then hit next to accept the
+    > default options.
+
+4. Click the `Terminal` icon
+   !["terminal"]({{ site.baseurl }}/images/terminal.png) in the top menu bar.
+5. Type `cd` + a space into the window that appears and copy the contents of
+   you copied and saved in step 2.  It should look something like below:   
+   ```
+   cd /Users/cecilsagehen/git/fa2105
+   ```  
+   Hit return.  
+   Then copy and paste the following:  
+   ```
+   python configure_git.py  
+   ```  
+   Hit return.
+   You will be prompted for your password.  Enter the password for the lab computer
+   and hit return.
+   Enter the remaining information as it prompts you to and hit return after each prompt.
+6. Right click on the "Lab00 [fa2015 master]" project in the *Project Explorer*
+   panel.  Then click on **Team** *>* **Show in Repositories View**.  The *Git
+   Repositories* view should open.
 
 ## Repeated Tasks Throughout the Semester
 
@@ -126,3 +226,6 @@ course.
 ### GitHub
 
 ### Eclipse
+
+[eclipse]: http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/marsr
+[objectdraw]: http://eventfuljava.cs.williams.edu/library/objectdrawV1.1.2.jar

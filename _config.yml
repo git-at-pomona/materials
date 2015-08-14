@@ -4,7 +4,8 @@ description: >
   A companion site for the CS051 Introduction to Computer Science Course
   offered at Pomona College dedicated to the documentation of implementing
   the Git and GitHub in the lab environment.
-baseurl: http://git-at-pomona.github.io/materials/
+url: http://git-at-pomona.github.io
+baseurl: /materials
 github_username: git-at-pomona
 
 # Build settings

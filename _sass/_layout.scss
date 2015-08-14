@@ -34,6 +34,11 @@
     .page-link {
         color: $text-color;
         line-height: $base-line-height;
+        text-decoration: none;
+
+        &:hover {
+            font-style: italic;
+        }
 
         // Gaps between nav items, but not on the first one
         &:not(:first-child) {
@@ -92,8 +97,9 @@
  * Site footer
  */
 .site-footer {
-    border-top: 1px solid $grey-color-light;
+    //border-top: 1px solid $grey-color-light;
     padding: $spacing-unit 0;
+    background-color: invert($grey-color-dark);
 }
 
 .footer-heading {
@@ -161,17 +167,33 @@
  */
 .page-header {
     padding-top: $spacing-unit * 1.5;
-    padding-bottom: $spacing-unit * 1.5;
-    color: white;
     background: $brand-color;
+    text-align: center;
+
+    p {
+        text-align: center;
+        font-style: italic;
+    }
+
+    .wrapper {
+        padding-top: $spacing-unit;
+        background-color: $background-color;
+    }
 }
 
 /**
  * Page content
  */
 .page-content {
-    padding: $spacing-unit 0;
-    
+    padding-bottom: $spacing-unit;
+    background-color: $grey-color-light;
+
+    .wrapper {
+        background-color: $background-color;
+        padding-top: $spacing-unit;
+        padding-bottom: $spacing-unit;
+    }
+
     h1, h2, h3, h4, h5, h6 {
         font-weight: 800;
     }

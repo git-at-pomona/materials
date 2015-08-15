@@ -1,4 +1,4 @@
-Pommona College CS051: GitHub Course Development
+Pomona College CS051: GitHub Course Development
 ========
 
 ## About

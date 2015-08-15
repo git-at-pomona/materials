@@ -1,3 +1,5 @@
+> The contents of this repository will be relocated to https://github.com/git-at-pomona
+
 Pomona College CS051: GitHub Course Development
 ========
 
